@@ -20,9 +20,9 @@ def scrape_updates(html_content):
     return selector.css(".entry-title a::attr(href)").getall()
 
 
-# Requisito 3
 def scrape_next_page_link(html_content):
-    """Seu código deve vir aqui"""
+    selector = Selector(html_content)
+    return selector.css(".next ::attr(href)").get()
 
 
 # Requisito 4
